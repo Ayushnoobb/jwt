@@ -33,21 +33,21 @@ router.get("/" ,(req , res) => {
   res.json({name:"ayush"})
 })
 
-const users =[
-  {
-    username:"ayush"
-  },
-  {
-    username:"ankit"
-  }
-]
+// const users =[
+//   {
+//     username:"ayush"
+//   },
+//   {
+//     username:"ankit"
+//   }
+// ]
 
-app.post("/api/post" , authenticateToken , (req , res) => {
-  const response = users.filter(post => {
-    return post.username == req.user.name;
+// app.post("/api/post" , authenticateToken , (req , res) => {
+//   const response = users.filter(post => {
+//     return post.username == req.user.name;
     
-  })
-  res.json(response);
-})
+//   })
+//   res.json(response);
+// })
 
 app.listen(3001)
