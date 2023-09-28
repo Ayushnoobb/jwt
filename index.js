@@ -1,7 +1,7 @@
 import express, { urlencoded } from 'express'
 // import authRouter from './controllers/auth/authController.js';
 // import cors from 'cors'
-import dotenv from 'dotenv'
+// import dotenv from 'dotenv'
 import { authenticateToken } from './middleware/authMiddleWare.js';
 
 dotenv.config();
