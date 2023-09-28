@@ -4,7 +4,7 @@ import express, { urlencoded } from 'express'
 // import dotenv from 'dotenv'
 import { authenticateToken } from './middleware/authMiddleWare.js';
 
-dotenv.config();
+// dotenv.config();
 
 
 const app = express();
