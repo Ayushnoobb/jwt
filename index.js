@@ -1,4 +1,4 @@
-// import express from 'express'
+import express from 'express.js'
 // // import authRouter from './controllers/auth/authController.js';
 // // import cors from 'cors'
 // // import dotenv from 'dotenv'
@@ -52,7 +52,7 @@
 
 // app.listen(3001)
 
-const express = require("express")
+// const express = require("express")
 
 const app = express()
 
