@@ -1,16 +1,21 @@
 const express = require('express');
-const { urlencoded } = require('express');
-const authRouter = require('./controllers/auth/authController.js');
 const cors = require('cors');
-const dotenv = require('dotenv');
+
+const authRouter = require('./controllers/auth/authController.js');
 const { authenticateToken } = require('./middleware/authMiddleWare.js');
 
+const dotenv = require('dotenv');
 dotenv.config();
 
+
 const app = express();
+
+const { urlencoded } = require('express');
+app.use(urlencoded({ extended: false }));
 const router = express.Router();
 
-app.use(urlencoded({ extended: false }));
+const {MongoClient} = require("mongodb")
+const client = new MongoClient(process.env.mongo_url)
 
 app.use(
   cors({
@@ -30,6 +35,24 @@ app.use('/api/auth', authRouter);
 app.get('/', (req, res) => {
   res.json({ name: 'ayush' });
 });
+
+app.get("/db" , async(req , res) => {
+  try{
+    await client.connect();
+    const db = client.db("Online-Mart")
+    const products = db.collection("product")
+
+    const responseProduct = await products.find({}).toArray();
+    res.json(responseProduct);
+  }catch(error){
+    console.error("cannot connect to db" , error);
+    // if(error){
+    //   res.sendStatus(500).json({status : "failed"})
+    // }
+  }finally{
+    client.close()
+  }
+})
 
 const users = [
   {

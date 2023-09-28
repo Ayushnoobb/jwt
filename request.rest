@@ -1,15 +1,24 @@
-POST http://localhost:3001/api/auth/sign-in
+POST https://jwt-lovat.vercel.app/api/auth/sign-in
 Content-Type: application/json
 
 {
-  "username":"ayush"
+  "username":"ankit"
 }
 
 
 ###
 
-POST http://localhost:3001/api/post
-authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYXl1c2giLCJpYXQiOjE2OTU4OTM3Mjh9.Q0WfBWUACYmjOAjyorZ9KLuo36qDMRBxGAir8ousAhg
+POST https://jwt-lovat.vercel.app/api/post
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYW5raXQiLCJpYXQiOjE2OTU5MTc0OTR9.k-H6qRq5Hhio6_pQYyLmv_U76NB2V_R2rdFj_BPvFOU
 Content-Type: application/json
+
+
+###
+POST https://jwt-lovat.vercel.app/api/auth/sign-in
+Content-Type: application/json
+
+{
+  "username":"ayush"
+}
 
 
