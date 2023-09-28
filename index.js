@@ -57,7 +57,7 @@ const express = require("express")
 const app = express()
 
 app.get("/" , (req , res) => {
-  res.send("hello")
+  res.send("hello" + process.env.access_token_secret)
 })
 
 app.listen(3001);
