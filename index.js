@@ -1,6 +1,6 @@
 import express, { urlencoded } from 'express'
 // import authRouter from './controllers/auth/authController.js';
-import cors from 'cors'
+// import cors from 'cors'
 import dotenv from 'dotenv'
 import { authenticateToken } from './middleware/authMiddleWare.js';
 
@@ -12,18 +12,18 @@ const router = express.Router();
 
 app.use(urlencoded({extended:false}))
 
-app.use(
+// app.use(
 
-  cors({
-    'allowedHeaders': ['sessionId', 'Content-Type', 'Authorization', 'authorization'],
-    'exposedHeaders': ['sessionId'],
-    'origin': ['https://eccentrictoad.com', 'https://www.eccentrictoad.com'],
-    'methods': 'GET,HEAD,PUT,PATCH,POST,DELETE',
-    'credentials': false,
-    'preflightContinue': false
-  })
+//   cors({
+//     'allowedHeaders': ['sessionId', 'Content-Type', 'Authorization', 'authorization'],
+//     'exposedHeaders': ['sessionId'],
+//     'origin': ['https://eccentrictoad.com', 'https://www.eccentrictoad.com'],
+//     'methods': 'GET,HEAD,PUT,PATCH,POST,DELETE',
+//     'credentials': false,
+//     'preflightContinue': false
+//   })
 
-)
+// )
 
 app.use(router);
 app.use(express.json())
