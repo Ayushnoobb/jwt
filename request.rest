@@ -1,0 +1,15 @@
+POST http://localhost:3001/api/auth/sign-in
+Content-Type: application/json
+
+{
+  "username":"ayush"
+}
+
+
+###
+
+POST http://localhost:3001/api/post
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYXl1c2giLCJpYXQiOjE2OTU4OTM3Mjh9.Q0WfBWUACYmjOAjyorZ9KLuo36qDMRBxGAir8ousAhg
+Content-Type: application/json
+
+
