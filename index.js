@@ -2,7 +2,7 @@ import express from 'express'
 // import authRouter from './controllers/auth/authController.js';
 // import cors from 'cors'
 // import dotenv from 'dotenv'
-import { authenticateToken } from './middleware/authMiddleWare.js';
+// import { authenticateToken } from './middleware/authMiddleWare.js';
 
 // dotenv.config();
 
@@ -10,7 +10,7 @@ import { authenticateToken } from './middleware/authMiddleWare.js';
 const app = express();
 const router = express.Router();
 
-app.use(urlencoded({extended:false}))
+// app.use(urlencoded({extended:false}))
 
 // app.use(
 
