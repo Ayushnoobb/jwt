@@ -26,10 +26,10 @@ app.use(urlencoded({extended:false}))
 // )
 
 app.use(router);
-app.use(express.json())
+// app.use(express.json())
 // app.use('/api/auth' , authRouter);
 
-app.get("/" ,(req , res) => {
+router.get("/" ,(req , res) => {
   res.json({name:"ayush"})
 })
 
