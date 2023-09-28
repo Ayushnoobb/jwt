@@ -1,4 +1,4 @@
-import express, { urlencoded } from 'express'
+import express from 'express'
 // import authRouter from './controllers/auth/authController.js';
 // import cors from 'cors'
 // import dotenv from 'dotenv'
