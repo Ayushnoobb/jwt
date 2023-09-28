@@ -15,7 +15,7 @@ app.use(urlencoded({ extended: false }));
 const router = express.Router();
 
 const {MongoClient} = require("mongodb")
-const client = new MongoClient(process.env.mongo_url)
+const client = new MongoClient(process.env.mongo_url || process.env.MONGODB_URI)
 
 app.use(
   cors({
