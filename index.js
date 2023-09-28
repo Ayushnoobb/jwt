@@ -1,5 +1,5 @@
 import express, { urlencoded } from 'express'
-import authRouter from './controllers/auth/authController.js';
+// import authRouter from './controllers/auth/authController.js';
 import cors from 'cors'
 import dotenv from 'dotenv'
 import { authenticateToken } from './middleware/authMiddleWare.js';
@@ -27,7 +27,7 @@ app.use(
 
 app.use(router);
 app.use(express.json())
-app.use('/api/auth' , authRouter);
+// app.use('/api/auth' , authRouter);
 
 app.get("/" ,(req , res) => {
   res.json({name:"ayush"})
